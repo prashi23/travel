@@ -4,10 +4,12 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
 const middlewares = require('./middlewares');
+const logs = require('./api/logs');
 const mongoose = require('mongoose');
 
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true, 
+    useUnifiedTopology: true,
 });
 
 const app = express();
@@ -18,11 +20,16 @@ app.use(cors({
 }
 ));
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
     res.json({
         message: "Hello World!",
     });
 });
+
+app.use('/api/logs', logs);
+
 
 //not found error middleware
 app.use(middlewares.notFound);
