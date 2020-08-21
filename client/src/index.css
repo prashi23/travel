@@ -8,9 +8,43 @@ body {
     width: 100vw;
 }
 
+.popup img {
+  height: 200px;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
 .marker {
   stroke: #030300;
   height: 24px;
   width: 24px;
   transform: translate(-50%, -100%);
+}
+
+.error {
+  color: #f05305;
+}
+
+.marker.red path {
+  fill: #f05305;
+}
+
+.marker.yellow path {
+  fill: #f3b73e;
+}
+
+.popup {
+  width: 40vw;
+  padding: 1rem;
+}
+
+.entry-form label, 
+.entry-form input, 
+.entry-form textarea, 
+.entry-form button {
+  font-size: 2rem;
+  margin: 0.5rem, 0;
+  display: block;
+  width: 100%;
 }
