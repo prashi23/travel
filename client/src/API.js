@@ -14,5 +14,11 @@ export async function createLogEntry(entry) {
         },
         body: JSON.stringify(entry),
     });
-    return response.json();
+    const json = await response.json();
+    if(response.ok) {
+        return json;
+    }
+    const error = new Error(json.message);
+    error.response = json;
+    throw error;
 }
