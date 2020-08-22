@@ -60,8 +60,8 @@ const getEntries = async() => {
             <svg
                   className="marker yellow"
                   style={{
-                    height: `${12 * viewport.zoom}px`,
-                    width: `${12 * viewport.zoom}px`,
+                    height: `${6 * viewport.zoom}px`,
+                    width: `${6 * viewport.zoom}px`,
                   }}
                   version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512">
                   <g>
@@ -110,8 +110,8 @@ anchor="top" >
 <svg
     className="marker red"
     style={{
-      height: `${12 * viewport.zoom}px`,
-      width: `${12 * viewport.zoom}px`,
+      height: `${6 * viewport.zoom}px`,
+      width: `${6 * viewport.zoom}px`,
     }}
 version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512">
 <g>
