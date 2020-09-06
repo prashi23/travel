@@ -19,7 +19,7 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
     try {
-        if(req.get('X-API_KEY') !== API_KEY) {
+        if(req.get('X-API-KEY') !== API_KEY) {
             res.status(401);
             throw new Error('UnAuthorized');
         }
